@@ -1,0 +1,48 @@
+package javaprograms;
+
+interface Searchable {
+	public final String key="ash@123";
+	void search(String key);
+}
+
+class Docs implements Searchable {
+
+	@Override
+	public void search(String pass) {
+		// TODO Auto-generated method stub
+		if(pass.equals(key)) {
+			System.out.println("Word found");
+		}else {
+			System.out.println("not found");
+		}
+	}
+	
+}
+
+class Webpage implements Searchable{
+
+	@Override
+	public void search(String pass) {
+		// TODO Auto-generated method stub
+		if(pass.equals(key)) {
+			System.out.println("Word found");
+		}
+		else {
+			System.out.println("not found");
+		}
+	}
+	
+}
+public class InterfaceSearch_Ex3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Docs dobj=new Docs();
+		Webpage wobj=new Webpage();
+		
+		dobj.search("ash@123");
+		
+		wobj.search("ashhh");
+	}
+
+}
